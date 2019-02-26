@@ -18,14 +18,15 @@ test('should pass for valid input', () => {
     expect(text).toBe('Max (25 years old)');
 })
 
-test('browser testing with some element and unint test', async () => {
+test('browser testing with some element and unit test', async () => {
     const browser = await puppeteer.launch({
         headless: false,
         slowMo: 80,
         args: ['--window-size=1920, 1080']
     });
     const page = await browser.newPage();
-    await page.goto('file:///home/john/Desktop/js-testing-introduction/index.html');
+    //path to index.html
+    await page.goto('');
 
     await page.click('input#name');
     await page.type('input#name', 'Dude');
