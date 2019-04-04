@@ -25,8 +25,8 @@ test('browser testing with some element and unit test', async () => {
         args: ['--window-size=1920, 1080']
     });
     const page = await browser.newPage();
-    //path to index.html
-    await page.goto('');
+    //full path to index.html
+    await page.goto('file:///home/neomeric/Hamza/git/UnitAndOtherTesting/index.html');
 
     await page.click('input#name');
     await page.type('input#name', 'Dude');
